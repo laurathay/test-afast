@@ -1,0 +1,195 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400italic,400,900,300italic,300,700,900italic,700italic);
+* {
+	@extend .typo-lissage ;
+}
+.typo-1 {
+	font-family : "PT Sans", sans-serif;
+}
+
+.typo-2 {
+	font-family: "Merriweather", serif ;
+}
+.typo-1-regular {
+	@extend .typo-1 ;
+	font-weight : 400 ;
+}
+.typo-1-regular-italic {
+	@extend .typo-1 ;
+	font-weight : 400 ;
+	font-style: italic;
+}
+.typo-1-bold {
+	@extend .typo-1 ;
+	font-weight : 700 ;
+}
+.typo-1-bold-italic {
+	@extend .typo-1 ;
+	font-weight : 700 ;
+	font-style: italic;
+}
+
+.typo-2-light {
+	@extend .typo-2 ;
+	font-weight : 300 ;
+}
+.typo-2-light-italic {
+	@extend .typo-2 ;
+	font-weight : 300 ;
+	font-style: italic;
+}
+.typo-2-regular {
+	@extend .typo-2 ;
+	font-weight : 400 ;
+}
+.typo-2-regular-italic {
+	@extend .typo-2 ;
+	font-weight : 400 ;
+	font-style: italic;
+}
+.typo-2-bold {
+	@extend .typo-2 ;
+	font-weight : 700 ;
+}
+.typo-2-bold-italic {
+	@extend .typo-2 ;
+	font-weight : 700 ;
+	font-style: italic;
+}
+.typo-2-ultra-bold {
+	@extend .typo-2 ;
+	font-weight : 900 ;
+}
+.typo-2-ultra-bold-italic {
+	@extend .typo-2 ;
+	font-weight : 900 ;
+	font-style: italic;
+}
+
+/* typos : 
+- century gothic regular
+- century gothic bold
+- century gothic italic */
+
+$size0: 16px;
+$size1: 36px;
+$size2: 30px;
+$size3: 24px;
+// $size3: 18px;
+// $size4: 14px;
+// $size4: 16px;
+$size4: 18px;
+// $size5: 12px;
+$size5: 14px;
+$size6: 12px;
+body {
+	// font-size: $size0;
+	font-size: $size0;
+}
+
+$color-1 : #e6222e; /* red */
+$color-2 : #0e0e0e ; /* black */
+$color-3 : #454545 ; /* grey */
+$color-4 : #efe9e9 ; /* beige */
+$color-5 : #ffffff ; /* white */
+
+$light-color-1: #e6222e ;
+$light-color-2: #fff ;
+$light-color-3: #efe9e9 ;
+$light-color-4: #f1ebeb ;
+$dark-color-1: #292929 ;
+$dark-color-1: #040707 ;
+$dark-color-2: #454545 ;
+a {
+	color: $light-color-1;
+	@include transition(0.1s);
+	&:hover,
+	&:focus,
+	&:active {
+		color : #c3bebe ;
+	}
+}
+
+h1 {
+	font-size: $size1;
+	text-align: center;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: $size2;
+}
+h3 {
+	font-size: $size3;
+}
+.btn {
+	padding: 18px 15px;
+	// font-size: $size0 ;
+	font-size: $size4 ;
+	text-transform: uppercase ;
+	-webkit-border-radius: 3px; 
+	border-radius: 3px; 
+	border: 3px solid ;
+	background: none; 
+	/* century bold */
+	display: inline-block; 
+	margin: 15px 0 20px 0;
+	@include transition(0.15s);
+	&.btn-small {
+		padding: 12px 18px;
+		margin: 20px auto 10px auto;
+		border: 2px solid;
+		font-size: $size5;
+		@include transition(0.10s);
+	}
+	&.btn-1 {
+		border-color: $color-5 ;
+		color: $color-5;
+		&:hover {
+			background: $color-5;
+			color: $color-2 !important ;
+		}
+	}
+	&.btn-2 {
+		border-color: $color-1 ;
+		color: $color-1;
+		padding: 12px;
+		&:hover {
+			background: $color-1;
+			color: $color-5 ;
+		}
+	}
+	@extend .clearfix ;
+}
+p,
+span,
+strong {
+	color: $color-2 ;
+}
+/* GLOBALS */
+
+#container,
+#main-header {
+	// max-width: 1600px;
+	// max-width: initial ;
+	min-width: 900px;
+	// width: 1600px;
+	// @extend .center-block; 
+}
+.wrap-content {
+	width: 71.25%;
+	min-width: 900px;
+	max-width: 2400px;
+	@extend .center-box ;
+	padding: 0 30px;
+	@extend .clearfix;
+}
+hr {
+	margin: 20px auto;
+	// width: 219px;
+	display: inline-block;
+	width: 100%; 
+	height: 21px;
+	border: none;
+	outline: none;
+	background: url('images/separator.png') no-repeat center 100%;
+}
